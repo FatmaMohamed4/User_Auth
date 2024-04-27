@@ -39,35 +39,6 @@ app.post('/register', async (req, res) => {
 });
 
 
-// //log in
-// app.post('/login', async (req, res) => {
-//   try {
-//     // const db = await connectDB();
-//     const collection = db.collection('user');
-
-//     const { name, pass } = req.body;
-
-//     // Check if the patient with the given email exists
-//     const user = await collection.findOne({ name });
-
-//     if (!name) {
-//       return res.status(401).json({ error: 'Invalid email or password' });
-//     }
-
-//     // Check if the provided password matches the stored password (you should use a secure password hashing mechanism)
-//     if (user.pass !== pass) {
-//       return res.status(401).json({ error: 'Invalid email or password' });
-//     }
-
-//     // You might generate a token here and send it back to the client for authentication in future requests
-//     // For simplicity, let's just send a success message
-//     res.status(200).json({ message: 'Login successful' });
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ error: 'Internal server error' });
-//   }
-// });
-
 
 // Login without bcrypt (for educational purposes, not recommended for production)
 app.post('/login', async (req, res) => {
